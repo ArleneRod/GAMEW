@@ -1,0 +1,128 @@
+{
+  "locations": {
+    "Katzenmaier": {
+      "fullName": "AJ Katzenmaier Elementary",
+      "address": "24 W. Walton St., Chicago, IL 60610",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.253644404374!2d-87.63102848467963!3d41.90045677922152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd31af6d3b52f%3A0x7ec90b3146e3816b!2s24%20W%20Walton%20St%2C%20Chicago%2C%20IL%2060610%2C%20USA!5e0!3m2!1sen!2sus!4v1615976260036!5m2!1sen!2sus"
+    },
+    "Greenbay": {
+      "fullName": "Greenbay Elementary",
+      "address": "1734 N. Orleans St., Chicago, IL 60614",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.963934208038!2d-87.63730438467828!3d41.91142777921921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34935a2c3d1%3A0xd5b4af9f9bc68a94!2s1734%20N%20Orleans%20St%2C%20Chicago%2C%20IL%2060614%2C%20USA!5e0!3m2!1sen!2sus!4v1615976310042!5m2!1sen!2sus"
+    },
+    "HowardYeager": {
+      "fullName": "Howard A Yeager Elementary",
+      "address": "2245 N. Southport Ave., Chicago, IL 60614",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.254947932446!2d-87.6622486846788!3d41.92189137922067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33c7b73b5c3%3A0xf5d80d08312dd3f9!2s2245%20N%20Southport%20Ave%2C%20Chicago%2C%20IL%2060614%2C%20USA!5e0!3m2!1sen!2sus!4v1615976330048!5m2!1sen!2sus"
+    },
+    "MarjorieHart": {
+      "fullName": "Marjorie P Hart Elementary",
+      "address": "2625 N. Orchard St., Chicago, IL 60614",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.9164054095197!2d-87.64778178467835!3d41.92674997922008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34243f5d2f5%3A0x2c6122c33b5e3ea9!2s2625%20N%20Orchard%20St%2C%20Chicago%2C%20IL%2060614%2C%20USA!5e0!3m2!1sen!2sus!4v1615976350051!5m2!1sen!2sus"
+    }
+  },
+    "games": {
+      "2025_09_01_1": {
+        "date": "2025-09-01",
+        "time": "9:30 a.m.",
+        "teams": ["U1", "U4"],
+        "location": "Katzenmaier"
+      },
+      "2025_09_01_2": {
+        "date": "2025-09-01",
+        "time": "1:00 p.m.",
+        "teams": ["U3", "U2"],
+        "location": "Greenbay"
+      },
+      "2025_09_08_1": {
+        "date": "2025-09-08",
+        "time": "9:30 a.m.",
+        "teams": ["U5", "U6"],
+        "location": "HowardYeager"
+      },
+      "2025_09_08_2": {
+        "date": "2025-09-08",
+        "time": "1:00 p.m.",
+        "teams": ["U6", "U1"],
+        "location": "MarjorieHart"
+      },
+      "2025_09_15_1": {
+        "date": "2025-09-15",
+        "time": "9:30 a.m.",
+        "teams": ["U2", "U4"],
+        "location": "North"
+      },
+      "2025_09_15_2": {
+        "date": "2025-09-15",
+        "time": "1:00 p.m.",
+        "teams": ["U3", "U5"],
+        "location": "Katzenmaier"
+      },
+      "2025_09_22_1": {
+        "date": "2025-09-22",
+        "time": "9:30 a.m.",
+        "teams": ["U1", "U3"],
+        "location": "South"
+      },
+      "2025_09_22_2": {
+        "date": "2025-09-22",
+        "time": "1:00 p.m.",
+        "teams": ["U2", "U6"],
+        "location": "HowardYeager"
+      },
+      "2025_09_29_1": {
+        "date": "2025-09-29",
+        "time": "9:30 a.m.",
+        "teams": ["U4", "U5"],
+        "location": "Greenbay"
+      },
+      "2025_10_06_1": {
+        "date": "2025-10-06",
+        "time": "9:30 a.m.",
+        "teams": ["U2", "U5"],
+        "location": "MarjorieHart"
+      },
+      "2025_10_06_2": {
+        "date": "2025-10-06",
+        "time": "1:00 p.m.",
+        "teams": ["U1", "U6"],
+        "location": "South"
+      },
+      "2025_10_13_1": {
+        "date": "2025-10-13",
+        "time": "9:30 a.m.",
+        "teams": ["U3", "U4"],
+        "location": "HowardYeager"
+      },
+      "2025_10_13_2": {
+        "date": "2025-10-13",
+        "time": "1:00 p.m.",
+        "teams": ["U5", "U1"],
+        "location": "Greenbay"
+      },
+      "2025_10_20_1": {
+        "date": "2025-10-20",
+        "time": "9:30 a.m.",
+        "teams": ["U6", "U3"],
+        "location": "North"
+      },
+      "2025_10_20_2": {
+        "date": "2025-10-20",
+        "time": "1:00 p.m.",
+        "teams": ["U2", "U4"],
+        "location": "MarjorieHart"
+      },
+      "2025_10_27_1": {
+        "date": "2025-10-27",
+        "time": "9:30 a.m.",
+        "teams": ["U3", "U1"],
+        "location": "Katzenmaier"
+      },
+      "2025_10_27_2": {
+        "date": "2025-10-27",
+        "time": "1:00 p.m.",
+        "teams": ["U5", "U6"],
+        "location": "HowardYeager"
+      }
+    }
+  }
