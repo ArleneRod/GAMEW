@@ -1,8 +1,10 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import gameData from '../data/gameData.json';
 
 const Schedule = () => {
+  const navigate = useNavigate();
   const gamesByMonth = Object.values(gameData.games).reduce((acc, game) => {
     const month = new Date(game.date).getMonth();
     const monthName = new Date(game.date).toLocaleString('default', { month: 'long' });
@@ -36,7 +38,12 @@ const Schedule = () => {
               </thead>
               <tbody>
                 {monthData.games.sort((a, b) => new Date(a.date) - new Date(b.date)).map((game, index) => (
-                  <tr key={index}>
+                  <tr 
+                    key={index} 
+                    onClick={() => navigate(`/game/${Object.keys(gameData.games)[index]}`)}
+                    style={{ cursor: 'pointer' }}
+                    className="hover:bg-gray-100"
+                  >
                     <td>{new Date(game.date).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' })}</td>
                     <td>{game.teams.join(" vs ")}</td>
                     <td>{gameData.locations[game.location]?.fullName}</td>

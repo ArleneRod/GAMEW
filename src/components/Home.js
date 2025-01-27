@@ -156,29 +156,7 @@ const Home = () => {
           </table>
         </section>
 
-        <section id="game-locations">
-          <h3>Game Locations:</h3>
-          <div>
-            {Object.keys(gameData.locations).map((locationKey) => {
-              const location = gameData.locations[locationKey];
-              return (
-                <div key={locationKey} className="location-item">
-                  <h4>{location.fullName}</h4>
-                  <p>{location.address}</p>
-                  <iframe
-                    src={location.mapEmbedUrl}
-                    width="300"
-                    height="200"
-                    style={{ border: "0", marginTop: "10px" }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    title={`Map of ${location.fullName}`}
-                  ></iframe>
-                </div>
-              );
-            })}
-          </div>
-        </section>
+
         <section className="additional-game-info">
           <p>
             <span className="additional-info-introductions">Facility Type:</span>{" "}
