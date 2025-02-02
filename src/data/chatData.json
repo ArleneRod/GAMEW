@@ -1,0 +1,28 @@
+
+{
+    "messages": {
+      "2025_09_01_1": {
+        "message-1": {
+          "author": "johnDutch.nl@example.com",
+          "authorName": "John Dutch",
+          "text": "Hoi. hoe het jullie?",
+          "timestamp": 1726713122679,
+          "avatar": "/api/placeholder/60/60"
+        },
+        "message-2": {
+          "author": "jeff.carlos@example.com",
+          "authorName": "Carlos",
+          "text": "Remember to bring water! 30 minutes after de game",
+          "timestamp": 1726713222679,
+          "avatar": "/api/placeholder/60/60"
+        },
+        "message-3": {
+          "author": "carla.perez@example.com",
+          "authorName": "Carla Perez",
+          "text": "Will there be reunite before the game?",
+          "timestamp": 1726713322679,
+          "avatar": "/api/placeholder/60/60"
+        }
+      }
+    }
+  }

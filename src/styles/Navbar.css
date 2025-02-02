@@ -1,0 +1,17 @@
+.dropdown-menu {
+    border: 1px solid rgba(255,255,255,.1);
+  }
+  
+  .dropdown-item:hover {
+    background-color: rgba(255,255,255,.1) !important;
+    color: white !important;
+  }
+  
+  .dropdown-item.active {
+    background-color: rgba(255,255,255,.2) !important;
+    color: white !important;
+  }
+  
+  .about-variable {
+    color: inherit;
+  }

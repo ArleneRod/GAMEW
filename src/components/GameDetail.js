@@ -2,9 +2,11 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import gameData from '../data/gameData.json';
+import { useUserState } from '../firebase';
 
 const GameDetail = () => {
   const { id } = useParams();
+  const [user] = useUserState();
   const game = gameData.games[id];
   const location = gameData.locations[game?.location];
 
@@ -14,7 +16,14 @@ const GameDetail = () => {
 
   return (
     <div className="container mt-4">
-      <Link to="/games" className="btn btn-secondary mb-3">← Back to Schedule</Link>
+      <div className="d-flex justify-content-between align-items-center mb-3">
+        <Link to="/games" className="btn btn-secondary">← Back to Schedule</Link>
+        {user && (
+          <Link to={`/game/${id}/chat`} className="btn btn-primary">
+            Game Chat
+          </Link>
+        )}
+      </div>
       
       <div className="card">
         <div className="card-body">

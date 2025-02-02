@@ -12,14 +12,7 @@ const Home = () => {
         <h2>NYSL Game Information</h2>
       </div>
       <img id="logo" src="img/nysl_logo.png" alt="Northside Youth Soccer League Logo" />
-      <nav id="nav-bar">
-        <a className="inactive-link" href="index.html">Home</a>
-        <a className="inactive-link" href="about.html">About <span className="about-variable">NYSL</span></a>
-        <a className="inactive-link" href="contact.html">Contact</a>
-        <a className="inactive-link" href="rules.html">Rules and Policies</a>
-        <a className="active-link">Game Information</a>
-        <a className="inactive-link" href="registration.html">Registration Form</a>
-      </nav>
+  
       <main id="content">
         <section>
           <h3>Fall Schedule</h3>
