@@ -6,15 +6,14 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useEffect, useState } from 'react';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDZjZj5B0_ncN_z1Z_F8dY78ncGCR1E9x4",
-  authDomain: "gamew-7f28b.firebaseapp.com",
-  projectId: "gamew-7f28b",
-  storageBucket: "gamew-7f28b.firebasestorage.app",
-  messagingSenderId: "562126289942",
-  appId: "1:562126289942:web:6361f481f7c218059cc937",
-  databaseURL: "https://gamew-7f28b-default-rtdb.europe-west1.firebasedatabase.app"
-};
-
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY, 
+    authDomain: "gamew-7f28b.firebaseapp.com",
+    projectId: "gamew-7f28b",
+    storageBucket: "gamew-7f28b.firebasestorage.app",
+    messagingSenderId: "562126289942",
+    appId: "1:562126289942:web:6361f481f7c218059cc937",
+    databaseURL: "https://gamew-7f28b-default-rtdb.europe-west1.firebasedatabase.app"
+  };
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const database = getDatabase(app);
