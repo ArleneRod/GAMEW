@@ -1,245 +1,149 @@
-body{
-    font-family:Arial;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-#header{
-    position:relative;
-    width:100%;
-    height:310px;
-    background-image:url("../../public/img/design1_image1.jpg");
-    background-size:cover;
-    display:block;
-    z-index:-1;
-}
-#title-bar{
-    font-size:110%;
-    height:45px;
-    width:60%;
-    color:black;
-    background-color:white;
-    line-height:45px;
-    position:relative;
-    left:200px;
-    border-bottom:thick inset black;
-    text-align:center;
-}
-#nav-bar{
-    position:absolute;
-    right:0px;
-    top:270px;
-    width:760px;
-}
-#nav-bar a{
-    margin:1%;
-    padding:5px 10px;
-    border: 3px black solid;
-    box-shadow: 5px 5px 0px 0px rgba(0,0,0,.7);
-    text-decoration:none;
-    font-family:"Courier New";
-    font-size:70%;
-}
-.inactive-link{
-    background-color:white;
-    color:black;
-}
-.active-link{
-    background-color:black;
-    color:white;
-}
-h1{
-    color:white;
-    padding:10px 0px 0px 15px;
-    font-size:3.4em;
-    margin:0px;
-    position:relative;
-    font-style:italic;
-    font-family:"Courier New";
-}
-h2{
-    font-size:1em;
-    margin:0px;
-}
-h3{
-    margin:0px;
-    font-size:1.7em;
-    font-family:"Courier New";
-}
-p{
-    margin:0px;
-}
-#logo{
-    height:150px;
-    width:150px;
-    position:absolute;
-    left:25px;
-    top:385px;
-}
-#content{
-    margin-left:200px;
-    margin-top:30px;
-    max-width:900px;
-}
-.contact-variable{
 
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 310px;
+    background-image: url("../../public/img/design1_image1.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: -1;
 }
-.about-variable{
-    display:none;
+
+
+#title-bar {
+    font-size: 110%;
+    height: 45px;
+    width: 80%;
+    max-width: 600px;
+    color: black;
+    background-color: white;
+    line-height: 45px;
+    position: relative;
+    border-bottom: thick inset black;
+    text-align: center;
+    margin: 20px auto;
 }
-/*applies to rules page*/
-li{
-    margin-bottom:15px;
+
+
+#nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
 }
-.rules-header{
-    margin-top:25px;
+
+#nav-bar a {
+    padding: 8px 15px;
+    border: 3px solid black;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.7);
+    text-decoration: none;
+    font-family: "Courier New", monospace;
+    font-size: 1em;
 }
-.rule-introduction{
-    font-weight:bold;
+
+.inactive-link {
+    background-color: white;
+    color: black;
 }
-/*applies to game-info page*/
-#saturday-warning{
-    text-decoration:underline;
-    font-style:italic;
-    margin:15px 0px;
+
+.active-link {
+    background-color: black;
+    color: white;
 }
-.first-td{
-    position:relative;
-    left:30px;
+
+
+#logo {
+    height: auto;
+    width: 120px;
+    max-width: 150px;
+    display: block;
+    margin: 20px auto;
 }
-th{
-    text-align:left;
-    font-size:1.15em;
-    text-decoration:underline;
-    width:150px;
+
+/* CONTENIDO PRINCIPAL RESPONSIVE */
+#content {
+    margin: 30px auto;
+    max-width: 90%;
+    text-align: center;
 }
-.first-header{
-    width:180px;
+
+/* TABLAS RESPONSIVAS 
+table {
+    width: 100%;
+    max-width: 750px;
+    border-spacing: 0;
+    margin: 20px auto;
+    display: block;
+    overflow-x: auto;
 }
-#game-locations-header{
-    text-decoration:none;
-    font-size:1em;
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}*/
+
+
+.additional-game-info {
+    width: 100%;
+    max-width: 620px;
+    margin: 20px auto;
+    text-align: center;
 }
-.game-locations-name{
-    width:250px;
-    font-weight:bolder;
+
+.additional-info-introductions {
+    font-weight: bold;
 }
-.game-locations-description{
-    width:350px;
+
+
+form {
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
 }
-.additional-game-info{
-    margin-bottom:20px;
-    width:620px;
+
+input {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    border: none;
+    border-bottom: solid black thin;
+    font-size: 1em;
 }
-.additional-info-introductions{
-    font-weight:bold;
-}
-.location-description-row{
-    height:100px;
-}
-#email{
-    display:inline-block;
-    float:right;
-}
-#phone{
-    display:inline-block;
-}
-table{
-    margin-bottom:20px;
-    border-spacing:0px;
-    width:700px;
-}
-/*applies to contact page*/
-#contact-bottom{
-    margin-top:20px;
-}
-/*applies to home page*/
-.date{
-    font-style:italic;
-}
-.description{
-    margin:0px 0px 30px 25px;
-}
-/*applies to registration page*/
-form{
-    width:750px;
-}
-input{
-    border:none;
-    border-bottom:solid black thin;
-    font-size:1.1em;
-}
-.form-box{
-    margin-bottom:15px;
-}
-#player-name-box input{
-    width:25%;
-}
-#address-box input{
-    width:67%;
-}
-#city-zip-box input{
-    width:36%;
-}
-#parent-box input{
-    width:66%;
-}
-#contact-box input{
-    width:26%;
-}
-#permission-box p{
-    font-size:.6em;
-    margin:10px 0px;
-}
-#permission-box-title{
-    font-size:.8em;
-    font-weight:bold;
-    text-decoration:underline;
-}
-#sign-box{
-    font-size:.8em;
-}
-#signature{
-    width:50%;
-}
-#date{
-    width:22%;
-}
-#submit-box{
-    width:100%;
-    margin-bottom:50px;
-}
-#submit-box input{
-    width:25%;
-    position:relative;
-    left:37.5%;
-    border:thin black solid;
-    font-family:"Courier New";
-}
-.form-question{
-    font-weight:bold;
-    margin-bottom:20px;
-}
-.question-clarifier{
-    font-weight:100;
-}
-.elementary-select{
-    font-size:.9em;
-    display:inline-block;
-    margin:20px;
-}
-.elementary-select select{
-    margin-top:20px;
-}
-.form-table td{
-    font-size:.7em;
-    width:50px;
-}
-.form-table th{
-    font-size:.8em;
-}
-.form-table{
-    margin-top:20px;
-    width:48%;
-    display:inline-block;
-}
-.position-table td{
-    width:90px;
+
+
+@media (max-width: 768px) {
+    #title-bar {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    #logo {
+        width: 100px;
+    }
+
+    #nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .additional-game-info {
+        width: 90%;
+    }
 }

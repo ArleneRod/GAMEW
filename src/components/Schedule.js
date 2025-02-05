@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import gameData from '../data/gameData.json';
@@ -55,6 +54,37 @@ const Schedule = () => {
           </div>
         </div>
       ))}
+      
+      <section className="container mt-4 p-3 bg-light rounded shadow-sm">
+        <p className="fw-bold">
+      <span className="text-dark">Facility Type:</span> Outdoor
+        </p>
+        <p>
+       <span className="fw-bold text-dark">Additional Information:</span> If
+       deemed necessary by NYSL, games may be shortened or cancelled due to
+       extreme weather conditions.
+      </p>
+      <p>
+      <span className="fw-bold text-dark">Please direct all questions to:</span>{" "}
+      Michael Randall, League Coordinator
+      </p>
+      <div className="row mt-3">
+      <div className="col-md-6">
+      <div id="phone" className="mb-2">
+      <span className="fw-bold text-dark">Phone:</span> (630) 690-8132
+      </div>
+     </div>
+     <div className="col-md-6">
+      <div id="email">
+      <span className="fw-bold text-dark">Email:</span>{" "}
+      <a href="mailto:michael.randall@chisoccer.org">
+        michael.randall@chisoccer.org
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
