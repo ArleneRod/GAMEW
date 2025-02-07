@@ -1,0 +1,34 @@
+/* styles/GamePhotos.module.css */
+.photosContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  
+  .photoItem img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.2s;
+  }
+  
+  .photoItem img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+  
+  .modalBody {
+    padding: 0;
+  }
+  
+  .modalContent {
+    background-color: transparent;
+  }
+  
+  .lightboxImage {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+  }
