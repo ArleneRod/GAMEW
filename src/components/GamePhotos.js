@@ -8,43 +8,60 @@ import { useUserState } from '../firebase';
 const GamePhotos = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [url, setUrl] = useState(null);
+  const [error, setError] = useState(null);
+  const [isUploading, setIsUploading] = useState(false);
   const { id } = useParams();
   const [user] = useUserState();
 
   const handleFileSelect = (e) => {
+    setError(null);
     if (e.target.files[0]) {
       const file = e.target.files[0];
-      console.log("Archivo seleccionado:", file.name);
-      console.log("Tipo de archivo:", file.type);
-      console.log("Tamaño:", file.size, "bytes");
+      if (file.size > 5 * 1024 * 1024) {
+        setError("File size too large. Please select an image under 5MB");
+        return;
+      }
       setSelectedFile(file);
     }
   };
 
   const handleUpload = async () => {
-    if (!selectedFile) return;
+    if (!selectedFile || !user || isUploading) return;
 
     try {
-      console.log("Iniciando subida...");
-      const imageRef = ref(storage, `game-pictures/${id}/${selectedFile.name}`);
-      console.log("Referencia creada:", `game-pictures/${id}/${selectedFile.name}`);
-      
-      const uploadResult = await uploadBytes(imageRef, selectedFile);
-      console.log("Archivo subido:", uploadResult);
-      
+      setIsUploading(true);
+      setError(null);
+
+      const extension = selectedFile.name.split('.').pop();
+      const fileName = `${Date.now()}.${extension}`;
+      const imageRef = ref(storage, `game-${id}/${fileName}`);
+
+      await uploadBytes(imageRef, selectedFile);
       const downloadUrl = await getDownloadURL(imageRef);
-      console.log("URL de descarga:", downloadUrl);
-      
+
       setUrl(downloadUrl);
       setSelectedFile(null);
-      
+
       const fileInput = document.querySelector('input[type="file"]');
       if (fileInput) fileInput.value = '';
-      
+
     } catch (error) {
-      console.error("Error detallado:", error);
+      console.error("Upload error:", error);
+      setError("Error uploading image. Please try again");
+    } finally {
+      setIsUploading(false);
     }
   };
+
+  if (!user) {
+    return (
+      <div className="container mt-4">
+        <div className="alert alert-warning">
+          Please sign in to upload pictures
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container mt-4">
@@ -54,45 +71,56 @@ const GamePhotos = () => {
         </Link>
       </div>
 
-      {user && (
-        <div className="card mb-4">
-          <div className="card-body">
-            <div className="input-group">
-              <input
-                type="file"
-                accept="image/*"
-                capture="environment"
-                className="form-control"
-                onChange={handleFileSelect}
-              />
-              <button
-                className="btn btn-primary"
-                onClick={handleUpload}
-                disabled={!selectedFile}
-              >
-                Post Picture
-              </button>
-            </div>
+      <div className="card mb-4">
+        <div className="card-body">
+          <div className="mb-3">
+            <input
+              type="file"
+              accept="image/*"
+              capture="environment"
+              className="form-control"
+              onChange={handleFileSelect}
+              disabled={isUploading}
+            />
+            <small className="text-muted d-block mt-1">
+              Maximum file size: 5MB
+            </small>
           </div>
+
+          {error && (
+            <div className="alert alert-danger mb-3">
+              {error}
+            </div>
+          )}
+
+          <button
+            className="btn btn-primary w-100"
+            onClick={handleUpload}
+            disabled={!selectedFile || isUploading}
+          >
+            {isUploading ? 'Uploading...' : 'Post Picture'}
+          </button>
         </div>
-      )}
+      </div>
 
       {url && (
         <div className="card mb-4">
           <div className="card-body">
-            <img src={url} alt="Uploaded" className="img-fluid" />
+            <img
+              src={url}
+              alt="Uploaded"
+              className="img-fluid rounded"
+            />
           </div>
         </div>
       )}
 
-      {}
       {selectedFile && (
         <div className="card mb-4">
           <div className="card-body">
-            <h5>Archivo seleccionado:</h5>
-            <p>Nombre: {selectedFile.name}</p>
-            <p>Tipo: {selectedFile.type}</p>
-            <p>Tamaño: {selectedFile.size} bytes</p>
+            <h5>Selected file:</h5>
+            <p>Name: {selectedFile.name}</p>
+            <p>Size: {(selectedFile.size / 1024 / 1024).toFixed(2)} MB</p>
           </div>
         </div>
       )}
